@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "isolatedModules": true,
+    "lib": ["dom", "esnext"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "strict": true,
+    "target": "es2017",
+    "paths": {
+      "~/.jest/helpers": ["../.jest/helpers.ts"],
+      "my/button": ["./modules/my/button/button.ts"]
+    }
+  },
+  "include": ["src", ".jest"]
+}

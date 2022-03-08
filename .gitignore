@@ -1,0 +1,15 @@
+# Hidden files and folders
+.vscode
+.coverage
+
+# Build artifacts
+node_modules
+dist
+
+# OS and IDE files
+.DS_Store
+Thumbs.db
+.vscode
+
+# Logs
+*.log

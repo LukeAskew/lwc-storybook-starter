@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`my-button works 1`] = `
+<my-button>
+  #shadow-root(open)
+    Test
+    <button>
+      <slot />
+    </button>
+</my-button>
+`;
