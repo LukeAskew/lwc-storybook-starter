@@ -6,7 +6,7 @@ import { babel } from "@rollup/plugin-babel";
 import resolve from "@rollup/plugin-node-resolve";
 import { terser } from "rollup-plugin-terser";
 
-const isDev = JSON.stringify("development") !== "production";
+const mode = (process.env.NODE_ENV ||= "development");
 
 const baseBabelConfig = {
   babelrc: false,
@@ -17,7 +17,7 @@ const baseBabelConfig = {
 const plugins = [
   replace({
     preventAssignment: true,
-    "process.env.NODE_ENV": JSON.stringify("development"),
+    "process.env.NODE_ENV": JSON.stringify(mode),
   }),
   babel({
     ...baseBabelConfig,
@@ -44,7 +44,7 @@ const plugins = [
   }),
 ];
 
-if (!isDev) {
+if (mode === "production") {
   plugins.push(
     terser({
       ecma: 2018,
@@ -57,7 +57,8 @@ export default {
 
   output: {
     dir: "dist/modules",
-    chunkFileNames: isDev ? "[name].chunk.js" : "[name]-[hash].chunk.js",
+    chunkFileNames:
+      mode === "production" ? "[name]-[hash].chunk.js" : "[name].chunk.js",
     format: "esm",
     sourcemap: true,
   },

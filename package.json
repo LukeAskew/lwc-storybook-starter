@@ -4,6 +4,9 @@
   "author": "Luke Askew <laskew@salesforce.com>",
   "license": "MIT",
   "type": "module",
+  "engines": {
+    "node": ">=16"
+  },
   "scripts": {
     "build": "node scripts/clean.js && rollup -c rollup.config.js",
     "storybook": "node scripts/storybook.js",
