@@ -12,7 +12,8 @@
     "target": "es2017",
     "paths": {
       "~/.jest/helpers": ["../.jest/helpers.ts"],
-      "my/button": ["./modules/my/button/button.ts"]
+      "my/button": ["./modules/my/button/button.ts"],
+      "my/image": ["./modules/my/image/image.ts"]
     }
   },
   "include": ["src", ".jest"]

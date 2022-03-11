@@ -1,0 +1,19 @@
+import { Meta, Canvas, Story } from "@storybook/addon-docs";
+import { html } from "lit-html";
+
+<Meta
+  title="my/my-image"
+  parameters={{
+    modules: ["/modules/my-image.js"],
+  }}
+/>
+
+## Base
+
+This is an example of MDX documentation.
+
+<Canvas>
+  <Story name="Base">{html`
+    <my-image src="/images/art-vandelay.jpg"></my-image>
+  `}</Story>
+</Canvas>
