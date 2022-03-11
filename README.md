@@ -28,3 +28,12 @@ Test:
 ```sh
 yarn test
 ```
+
+## Creating New Components
+
+Adding a new components requires a few steps:
+
+1. Create a new folder under the desired namespace e.g. `src/modules/my/{component}` where `{component}` is replaced with your component's name
+2. Add `{component}.css`, `{component}.html`, `{component}.ts`, and `{component}.stories.ts` files to the new folder
+3. Optional: if you want to expose your new component, create a "module" file in the root of `src` using the `{namespace}-{componentName}.ts` format
+4. Add a path alias to the `tsconfig.json#paths` config
