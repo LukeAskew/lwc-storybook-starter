@@ -5,6 +5,7 @@
 # Build artifacts
 node_modules
 dist
+.storybook-static
 
 # OS and IDE files
 .DS_Store

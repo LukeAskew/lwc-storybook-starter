@@ -47,6 +47,7 @@
     "@types/jest": "^27.4.1",
     "babel-loader": "^8.2.3",
     "chromatic": "^6.5.1",
+    "concurrently": "^7.0.0",
     "glob": "^7.2.0",
     "jest": "^27.5.1",
     "lit-html": "^2.2.0",

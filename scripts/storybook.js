@@ -1,11 +1,12 @@
-import { spawn } from "child_process";
+import concurrently from "concurrently";
 
-// Start file watchers
-spawn("rollup", ["-c", "rollup.config.js", "-w"], {
-  stdio: "inherit",
-});
-
-// Run Storybook in a separate process
-spawn("start-storybook", ["-p", "6006"], {
-  stdio: "inherit",
-});
+concurrently(
+  [
+    "watch",
+    { command: "rollup -c rollup.config.js -w", name: "rollup" },
+    { command: "start-storybook -p 6006", name: "storybook" },
+  ],
+  {
+    killOthers: ["failure"],
+  }
+);
